@@ -10,9 +10,9 @@ import configparser as CP
 from audiolib import audioread, audiowrite, snr_mixer
 
 def main(cfg):
-    snr_lower = float(cfg["snr_lower"])
-    snr_upper = float(cfg["snr_upper"])
-    total_snrlevels = float(cfg["total_snrlevels"])
+    snr_lower = int(cfg["snr_lower"])
+    snr_upper = int(cfg["snr_upper"])
+    total_snrlevels = int(cfg["total_snrlevels"])
     
     clean_dir = os.path.join(os.path.dirname(__file__), 'clean_train')
     if cfg["speech_dir"]!='None':
